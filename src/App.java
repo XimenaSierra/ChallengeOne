@@ -83,13 +83,7 @@ public class App {
     public static void selectPlanet(){
         
         System.out.println("Selecciona el planeta: ");
-        System.out.println("1. Mercurio");
-        System.out.println("2. Venus");
-        System.out.println("3. Marte");
-        System.out.println("4. Jupiter");
-        System.out.println("5. Saturno");
-        System.out.println("6. Urano");
-        System.out.println("7. Neptuno");
+ 
 
         for (int i = 0; i < planets.length; i++) {
             System.out.println((i+1) + ". " + planets[i]);

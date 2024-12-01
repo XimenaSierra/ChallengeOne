@@ -114,9 +114,7 @@ public class App {
     //Ship selection
     public static void selectShip(){
         System.out.println("\n --- Selección de nave ---" );
-        System.out.println("1. Explorer");
-        System.out.println("2. Innovation");
-        System.out.println("3. Life");
+      
 
         for (int i = 0; i < ships.length; i++) {
             System.out.println((i + 1) + ". " + ships[i] + " (Velocidad: " + speeds[i] + " km/h)");

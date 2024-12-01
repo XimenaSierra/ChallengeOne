@@ -1,18 +1,22 @@
-## Getting Started
+## Space Travel Simulator
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Welcome our project is a Java application that simulates a space journey. Users can select a destination planet, choose a spacecraft for the journey, and observe the simulation, including calculations such as estimated travel time, fuel consumption and random events like meteor showers.
 
-## Folder Structure
+## Features
 
-The workspace contains two folders by default, where:
+1. Planet selection
+    - Detailed information about planets, including distance from Earth and descriptions.
+2. Spacecraft selection
+    - Information on speed and passenger capacity.
+3. Advanced calculations
+    - travel time.
+    - Fuel consumption
+    - Oxygen requirements
+4. Random events:
+    - Meteor showers during the journey.
+5. Interactive simulation:
+    -- Visual progress of the journey with real-time updates.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+We hope you like it!!!
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Ximena Sierra & Daisy Malagon

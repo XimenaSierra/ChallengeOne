@@ -17,6 +17,17 @@ Welcome our project is a Java application that simulates a space journey. Users 
 5. Interactive simulation:
     -- Visual progress of the journey with real-time updates.
 
+## Instructions to run the program
+
+1. Open the src folder and the App.java file in your code editor of preference.
+2. Run the program: 
+    - Right click on the App.java file and select the Run Java option.
+3. Display the main menu: 
+    - Star by typing option 1 which is called select planet, it will return to the main menu.
+    - When finished, continue with option 2, called select a spacecraft.
+    - Finally, type 3 to start the simulation of the trip to the chosen destination.
+    - To exit the program, type 4.
+
 We hope you like it!!!
 
 Ximena Sierra & Daisy Malagon

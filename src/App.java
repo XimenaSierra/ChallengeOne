@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class App {
@@ -26,6 +27,9 @@ public class App {
     static int selectedPlanetIndex = -1; //Se realiza el decremento para que la elección sea apartir de 1
     static int selectedShipIndex = -1;
     static int passengers = 0;
+
+    static double fuelConsumptioRate = 0.5; // for hour in liters
+    static double oxygenConsumptionRate = 0.2; // for passenger  for hour
 
 
     public static void main(String[] args) throws Exception {
@@ -87,7 +91,7 @@ public class App {
         System.out.println("6. Urano");
         System.out.println("7. Neptuno");
 
-        for (int i = 0, i < planets.length; i++) {
+        for (int i = 0; i < planets.length; i++) {
             System.out.println((i+1) + ". " + planets[i]);
         }
 
@@ -166,15 +170,31 @@ public class App {
 
     }
 
+    //Fuel consumption
+    public static double calculateFuel(double travelTime) {
+        return fuelConsumptioRate * travelTime * 24; 
+    }
+
+    //Oxygen consumption
+    public static double calculateOxygen (double travelTime) {
+        return oxygenConsumptionRate * passengers * travelTime * 24; 
+    }
+
     //Simulation of travel progress
     public static void simulateProgress(double travelTime) {
         double progress = 0;
+        Random random = new Random();
 
         while (progress < 100) {
             try {
-                thread.sleep(500); 
+            Thread.sleep(500); 
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            }
+
+            //Random event: Meteor shower con el 10% de probabilidad
+            if (random.nextInt(10) == 0) {
+                System.out.println("¡Atención! Se acerca una lluvia de meteoritos. ¡Evadela! ");
             }
 
             progress += 10;
@@ -184,7 +204,10 @@ public class App {
                 System.out.println("Vamos en el " + (int) progress + "% del viaje hacia " + planets[selectedPlanetIndex] + "...");
             }
 
-            System.out.println("\n ¡Hemos llegado al planeta " + planets[selectedPlanetIndex] + " exitosamente!");
+            if (progress == 100) {
+                System.out.println("\n ¡Hemos llegado al planeta " + planets[selectedPlanetIndex] + " exitosamente!");
+            }
+
             
         }
     }
@@ -194,10 +217,4 @@ public class App {
     }
 
     
-
-
-    //Métodos auxiliares
-    public static void printPlanets(){
-
-    }
 }
